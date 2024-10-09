@@ -1,0 +1,23 @@
+<?php
+
+namespace Database\Seeders;
+
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Seeder;
+
+class PostSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     */
+    public function run(): void
+    {
+        $post= new \App\Models\Post();
+        
+        $post->image = 'https://picsum.photos/200/300';
+        $post->title = 'My First Post';
+        $post->description = 'This is my first post';
+        $post->save();
+        
+    }
+}
